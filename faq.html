@@ -12,6 +12,19 @@
   .brand { color:#a1a1a6; font-size:14px; letter-spacing:.14em; text-transform:uppercase; text-decoration:none }
   h1 { font-size:40px; line-height:1.12; margin:18px 0 12px }
   .lede { color:#a1a1a6; font-size:18px; margin-bottom:40px; max-width:56ch }
+  .wedo { margin:6px 0 8px }
+  .wedo h2 { font-size:26px; margin-bottom:6px }
+  .wedo .sub { color:#a1a1a6; font-size:17px; margin-bottom:20px; max-width:56ch }
+  .cards { display:grid; gap:14px }
+  @media (min-width:720px) { .cards { grid-template-columns:1fr 1fr 1fr } }
+  .card { background:#1d1d1f; border:1px solid #333336; border-radius:14px; padding:20px }
+  .card h3 { font-size:17px; margin-bottom:6px; color:#b79af0 }
+  .card p { color:#d7d7db; font-size:15px }
+  .mission { margin-top:22px; background:#1d1d1f; border:1px solid #333336; border-radius:14px; padding:24px }
+  .mission .eyebrow { color:#a1a1a6; font-size:13px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:8px }
+  .mission h3 { font-size:21px; margin-bottom:8px }
+  .mission p { color:#d7d7db; font-size:16px }
+  .divider { border-top:1px solid #333336; margin-top:40px }
   .qa { border-top:1px solid #333336; padding:26px 0 }
   .qa h3 { font-size:20px; margin-bottom:8px }
   .qa p { color:#d7d7db; font-size:16.5px }
@@ -153,6 +166,21 @@
     <a class="brand" href="index.html">Clicklaunch</a>
     <h1>Questions, answered straight.</h1>
     <p class="lede">What local businesses ask us before they launch: what it costs, how long it takes, what we need from you, and how getting found on Google and AI search actually works.</p>
+    <div class="wedo">
+      <h2>What we do</h2>
+      <p class="sub">One team for the whole launch: your website, your Google presence, and your AI search visibility, built to work together from day one.</p>
+      <div class="cards">
+        <div class="card"><h3>Websites</h3><p>Fast, custom websites for local service businesses, built to turn searches into phone calls. You own your website, your domain, and your content. No lock-in.</p></div>
+        <div class="card"><h3>Local SEO</h3><p>Your Google Business Profile, your reviews, and the service pages Google needs to show you in Maps and local results, kept current every month.</p></div>
+        <div class="card"><h3>AI Search</h3><p>Customers now ask ChatGPT and Google AI who to call. Every site we build is structured so those tools can read your business and cite it in their answers.</p></div>
+      </div>
+      <div class="mission">
+        <p class="eyebrow">Our mission</p>
+        <h3>Your time is the one thing you cannot buy more of.</h3>
+        <p>Every hour you spend fighting a website, chasing a lead you missed, or wondering why Google is not showing you is an hour off the work that actually pays. Our mission is to hand that time back: you run your business, we handle everything online.</p>
+      </div>
+    </div>
+    <div class="divider"></div>
       <div class="qa">
         <h3>Why is my business not showing up on Google?</h3>
         <p>Usually one of a few fixable reasons. Your Google Business Profile may not be claimed or verified yet. Your business info — name, phone, hours, services — may be missing, wrong, or inconsistent across the web. Your website may not clearly say what you do and where you do it. Or competitors near you simply have stronger profiles and more reviews, so Google shows them first. And sometimes it&#x27;s just newness: a new business or website can take a while to get picked up. The fix starts with finding which of these it is — that&#x27;s the first thing we check.</p>
