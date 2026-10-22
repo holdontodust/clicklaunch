@@ -34,3 +34,5 @@ Working with local service businesses across the US.
 ## Pages
 - Home: https://getclicklaunch.com/
 - Local SEO: https://getclicklaunch.com/local-seo/
+- Why is my business not showing up on Google: https://getclicklaunch.com/not-showing-up-on-google/
+- FAQ: https://getclicklaunch.com/faq.html
