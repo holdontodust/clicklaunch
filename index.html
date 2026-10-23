@@ -411,11 +411,21 @@
       .lineup-preview{height:500px}.rocket-film{--rocket-frame-height:460px;inset:0;border:0;border-radius:0}.rocket-copy{gap:20px;padding:28px 22px}.rocket-copy h4{font-size:54px}.hero-rocket{width:180px;max-width:54%}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pill,.text-link,.choice,.plan-choice,.addon,.reveal,.addon-detail,.addon-chev,.faq-panel,.faq-chev,.faq-toggle{transition:none}.reveal{opacity:1;transform:none}.process .step,.process .step.reveal,.process .step.reveal.visible,.process.steps-motion-ready .step.reveal,.process.steps-motion-ready .step.reveal.step-entered{opacity:1;transform:none;animation:none;transition:none;will-change:auto}.device{transform:translateX(-50%)}.device,.device::after,.soft-form,.browser-window,.motion-scene,.assembly-glow,.assembly-canvas,.assembly-nav,.assembly-label,.assembly-copy strong,.assembly-copy p,.assembly-action,.assembly-image,.assembly-chip,.assembly-status,.launch-mark,.launch-ring,.scene-indicator i::after,.rocket-site,.scroll-site,.ring-highlight{animation:none}.rocket-site{transform:none}.build-scene{opacity:1;transform:none}.assembly-canvas,.assembly-nav,.assembly-label,.assembly-copy strong,.assembly-copy p,.assembly-action,.assembly-image,.assembly-chip,.assembly-status{opacity:1;transform:none}.assembly-image{clip-path:none}.launch-scene,.stats-scene{opacity:0}.rocket-copy{animation:none;transform:none;filter:none;opacity:1;will-change:auto}.hero-rocket{animation:none;transform:rotate(-3deg)}}
+  
+      /* Switch-over section (preview build 2026-10-23) */
+      .switch{padding:110px 0 95px;background:var(--bg)}
+      .switch-card{max-width:820px;margin:44px auto 0;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:30px;text-align:left}
+      .switch-btn{width:100%;margin-top:20px;cursor:pointer;font-size:15px}
+      .switch-note{margin:16px 0 0;color:var(--muted);font-size:13px;line-height:1.45;text-align:center}
+      .switch-done{max-width:820px;margin:44px auto 0;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:38px 30px;text-align:center}
+      .switch-done h3{margin:0 0 10px;font-size:26px;letter-spacing:-.02em}
+      .switch-done p{margin:0;color:var(--muted);font-size:16px;line-height:1.5}
+      @media (max-width:640px){.switch{padding:80px 0 70px}.switch-card{padding:22px}.tabbar nav{overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.tabbar nav::-webkit-scrollbar{display:none}}
   </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="tabbar"><a class="wordmark" href="#home">clicklaunch</a><nav aria-label="Page sections"><a href="#home" data-spy="home" class="active">Home</a><a href="#packages" data-spy="packages">Packages</a><a href="#addons" data-spy="addons">Add Ons</a><a href="#choose-package" data-spy="start">Start a Project</a></nav></header>
+  <header class="tabbar"><a class="wordmark" href="#home">clicklaunch</a><nav aria-label="Page sections"><a href="#home" data-spy="home" class="active">Home</a><a href="#packages" data-spy="packages">Packages</a><a href="#addons" data-spy="addons">Add Ons</a><a href="#choose-package" data-spy="start">Start a Project</a><a href="#switch-over" data-spy="switch">Switch Over</a></nav></header>
   <main id="main">
     <header class="hero center" id="home">
       <div class="wrap">
@@ -516,6 +526,8 @@
     </section>
   </main>
 
+      <section class="switch" id="switch-over" aria-labelledby="switch-title"><div class="wrap"><div class="center reveal"><p class="eyebrow">Already have a website?</p><h2 class="section-title" id="switch-title">Feel like nothing’s changing with your Google profile?</h2><p class="lede">Hire people who care. At Click Launch we respond to your reviews and keep your page updated weekly, and everything stays in your name, your website, your domain, and your Google profile. We never ask for your passwords.</p></div>
+        <form class="switch-card" id="switchForm" action="https://formsubmit.co/sebastiankoulias@gmail.com" method="POST"><div class="intake-grid"><div class="field"><label for="swName">Your name</label><input id="swName" name="name" type="text" autocomplete="name" required placeholder="Your name"></div><div class="field"><label for="swBusiness">Business name</label><input id="swBusiness" name="business" type="text" autocomplete="organization" required placeholder="Your business"></div><div class="field"><label for="swPhone">Cell phone</label><input id="swPhone" name="phone" type="tel" autocomplete="tel" required placeholder="Best number to text"></div><div class="field"><label for="swEmail">Email</label><input id="swEmail" name="email" type="email" autocomplete="email" required placeholder="For your confirmation email"></div><div class="field"><label for="swSite">Current website</label><input id="swSite" name="website" type="text" placeholder="yourwebsite.com"></div><div class="field"><label for="swProvider">Who handles your SEO now?</label><input id="swProvider" name="current_provider" type="text" placeholder="Company name, or not sure"></div></div><input type="hidden" name="_subject" value="New SEO switch over request, Click Launch site"><input type="hidden" name="_template" value="table"><input type="hidden" name="_autoresponse" value="You're in. Your SEO switch over request just landed with Click Launch. Sebastian will text you at the number you gave to start the switch. Everything stays in your name, your website, your domain, and your Google profile, and we never ask for your passwords. Talk soon."><input type="hidden" name="_captcha" value="false"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"><button class="pill switch-btn" type="submit" id="switchSubmit">Start my switch over</button><p class="switch-note">Submitting sends us your details and emails you a confirmation. Sebastian follows up by text to run the switch, no scheduling page, no phone tag.</p></form></div></section>
   <footer><div class="wrap footer-inner"><p>Clicklaunch · Rapid turnaround begins after a complete content kit is approved.</p><p>Clear scope. Fast build. Ready to launch.</p><p><a href="faq.html" style="color:#a1a1a6;text-decoration:underline">FAQ</a></p></div></footer>
 
   <script>
@@ -558,14 +570,37 @@
       addonToggles.forEach(function(toggle){toggle.addEventListener("click",function(){var wasOpen=toggle.getAttribute("aria-expanded")==="true";addonToggles.forEach(function(other){setAddon(other,false)});if(!wasOpen)setAddon(toggle,true)})});
       var faqToggle=document.getElementById("faq-toggle");
       if(faqToggle){faqToggle.addEventListener("click",function(){var open=faqToggle.getAttribute("aria-expanded")==="true";faqToggle.setAttribute("aria-expanded",open?"false":"true");var panel=document.getElementById("faq-panel");if(panel)panel.classList.toggle("open",!open)})}
-      var spyTargets={home:document.getElementById("home"),packages:document.getElementById("packages"),addons:document.getElementById("addons"),start:document.getElementById("order")};
-      var spyOrder=["home","packages","addons","start"];
-      function setActiveSpy(key){spyLinks.forEach(function(a){a.classList.toggle("active",a.dataset.spy===key)});var hash=key==="start"?"#choose-package":"#"+key;if(window.location.hash!==hash){try{history.replaceState(null,"",hash)}catch(e){}}}
+      var spyTargets={home:document.getElementById("home"),packages:document.getElementById("packages"),addons:document.getElementById("addons"),start:document.getElementById("order"),switch:document.getElementById("switch-over")};
+      var spyOrder=["home","packages","addons","start","switch"];
+      function setActiveSpy(key){spyLinks.forEach(function(a){a.classList.toggle("active",a.dataset.spy===key)});var hash=key==="start"?"#choose-package":key==="switch"?"#switch-over":"#"+key;if(window.location.hash!==hash){try{history.replaceState(null,"",hash)}catch(e){}}}
       function spyScroll(){var line=76,current="home";spyOrder.forEach(function(key){var el=spyTargets[key];if(!el)return;var limit=key==="start"?Math.max(line,Math.round(window.innerHeight*.4)):line;if(el.getBoundingClientRect().top<=limit)current=key});setActiveSpy(current)}
       var spyTicking=false;window.addEventListener("scroll",function(){if(!spyTicking){spyTicking=true;window.requestAnimationFrame(function(){spyScroll();spyTicking=false})}},{passive:true});
       spyScroll();
       update();
     }());
+  </script>
+  <script>
+    (function(){
+      var form=document.getElementById("switchForm");
+      if(!form)return;
+      form.addEventListener("submit",function(ev){
+        ev.preventDefault();
+        var btn=document.getElementById("switchSubmit");
+        btn.disabled=true;btn.textContent="Sending...";
+        var data={};
+        new FormData(form).forEach(function(v,k){data[k]=v;});
+        fetch("https://formsubmit.co/ajax/sebastiankoulias@gmail.com",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(data)})
+        .then(function(r){if(!r.ok)throw new Error("send failed");return r.json();})
+        .then(function(){
+          var done=document.createElement("div");
+          done.className="switch-done";
+          done.innerHTML="<h3>You\u2019re in.</h3><p>Your switch over request just landed. Check your email for the confirmation, and Sebastian will text you at the number you gave to start the switch.</p>";
+          form.replaceWith(done);
+          done.scrollIntoView({behavior:"smooth",block:"center"});
+        })
+        .catch(function(){btn.disabled=false;btn.textContent="Start my switch over";form.submit();});
+      });
+    })();
   </script>
 </body>
 </html>
